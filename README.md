@@ -1,3 +1,5 @@
+# Description
+
 **xapi-observer** is an open-source observability tool for the Xen XAPI toolstack.
 It parses XAPI traces (Zipkin JSON), converts them to OpenTelemetry, and integrates with Grafana,
 Tempo, and Loki for scalable trace and log analysis.
@@ -6,7 +8,13 @@ Tempo, and Loki for scalable trace and log analysis.
 
 - I can do TDD using: `air --build.cmd "go test . -v"`
 
----
+# Status
+
+- [ ] Read Zipkin traces (XAPI observer)
+- [ ] Convert to OpenTelemetry format
+- [ ] Transfer them via OTLP to Tempo using a Collector
+- [ ] Visualize data in Grafana
+- [ ] Enrich data with XAPI logs
 
 # Example of traces
 
