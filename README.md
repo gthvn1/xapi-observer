@@ -2,8 +2,10 @@
 It parses XAPI traces (Zipkin JSON), converts them to OpenTelemetry, and integrates with Grafana,
 Tempo, and Loki for scalable trace and log analysis.
 
+- **Development setup**: I use a tmux session split into two panes: one running air for hot-reload, and the other for coding.
 
 ---
+
 
 # Example of traces
 ```json
