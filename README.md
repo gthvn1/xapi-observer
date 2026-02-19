@@ -38,21 +38,6 @@ otelcol.receiver.zipkin "zipkin" {
 otelcol.exporter.debug "console" {
   verbosity = "detailed"
 }
-
-
-local.file_match "tmplog" {
-  path_targets = [{
-    __path__ = "/tmp/log/*log",
-    job      = "varlog",
-  }]
-}
-
-loki.source.file "logs" {
-  targets    = local.file_match.tmplog.targets
-  forward_to = [loki.echo.example.receiver]
-}
-
-loki.echo "example" { }
 ```
 
 - Once started you can take a xapi trace (ndjson), concatenate tables and send it to alloy. You should see on console that it is read:
